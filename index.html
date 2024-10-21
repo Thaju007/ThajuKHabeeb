@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thaju K Habeeb - Data Scientist | ML Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4; 
+        }
+        .node {
+            fill: #cc0000;
+        }
+        .node:hover {
+            fill: #ff3333;
+        }
+        .node-center {
+            fill: #ff3333;
+        }
+        .link {
+            stroke: #ffcccc;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+        .pulse {
+            animation: pulse 5s infinite;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        .education-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .education-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem; /* Adjusted for alignment */
+            bottom: 0.5rem; /* Adjusted for alignment */
+            width: 2px;
+            background-color: #cc0000;
+        }
+        .education-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+        .education-item::before {
+            content: '';
+            position: absolute;
+            left: -2.25rem; /* Adjusted for alignment */
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid #cc0000;
+            border-radius: 50%;
+            background-color: #ffffff;
+        }
+        .education-item:hover::before {
+            background-color: #cc0000;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.4rem; /* Adjusted to center the line in the circle */
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #cc0000;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid #cc0000;
+            border-radius: 50%;
+            background-color: #ffffff;
+        }
+        .timeline-item:hover::before {
+            background-color: #cc0000;
+        }
+        .timeline-content {
+            padding-left: 1rem;
+            border-left: 2px solid transparent;
+            transition: border-left-color 0.3s ease;
+        }
+        .timeline-item:hover .timeline-content {
+            border-left-color: #cc0000;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans leading-normal tracking-normal">
+    <svg class="background-animation" xmlns="http://www.w3.org/2000/svg">
+    </svg>
+
+    <div class="content container mx-auto p-8">
+        <header class="text-center mb-10">
+            <div class="flex flex-col items-center justify-center mb-4">
+                <img src="Thaju_dp.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full mb-4">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold mb-2 text-red-700">THAJU K HABEEB</h1>
+                    <p class="text-xl text-red-600 mb-2">Data Scientist | ML Engineer | LLM Enthusiast</p>
+                    <p class="text-red-500 mb-2">Bengaluru, India</p>
+                    <div class="flex justify-center space-x-4 mt-2">
+                        <a href="mailto:thajukhabeeb1997@gmail.com" class="text-red-500 hover:text-red-700">
+                            <i class="fas fa-envelope fa-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/thaju-k-habeeb-01a0b316a/" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:text-red-700">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </a>
+                        <a href="https://github.com/Thaju007" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:text-red-700">
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="about-me" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-red-600">ABOUT ME</h2>
+            <p class="text-gray-700 mb-4">
+                As an experienced Data Scientist, I have expertise in Big Data, Deep Learning, and ML projects. I am eager to apply my skills in research areas, particularly in computer vision and NLP. I am driven by a passion for innovation and a relentless pursuit of knowledge, constantly seeking to push the boundaries of what's possible.
+            </p>
+        </section>
+
+        <section id="key-areas" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-red-600">KEY AREAS</h2>
+            <p class="text-gray-700">Machine Learning, Deep Learning, Data Analytics, Big Data, PyTorch, LLM, Addressing Practical Challenges with Research Solutions.</p>
+        </section>
+
+        <section id="education" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-red-600">EDUCATION & ACADEMICS</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="font-semibold text-red-500">B. Tech Mechanical Engineering</h3>
+                        <p class="text-gray-700">National Institute of Technology Calicut</p>
+                        <p class="text-gray-700">2017-2021</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-red-600">EXPERIENCE</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="font-semibold text-red-500">Data Scientist: Consultant</h3>
+                        <p class="text-gray-600">EXL Analytics | Jan, 2022 – Present</p>
+                        <ul class="list-disc list-outside text-gray-700 mt-2 ml-5">
+                            <li>Model for identifying real businesses:
+                                <ul class="list-disc list-outside ml-5">
+                                    <li>Implemented a Random Forest model and business rules to identify legit businesses</li>
+                                    <li>Achieved an accuracy rate of 88% through rigorous model training, validation, and fine-tuning</li>
+                                    <li>Significantly reduced marketing expenses and resource allocation by targeting only genuine businesses</li>
+                                </ul>
+                            </li>
+                            <li>Real Contact Identification Model:
+                                <ul class="list-disc list-outside ml-5">
+                                    <li>Developed an innovative model to identify genuine contacts by assigning scores ranging from 1 to 99</li>
+                                    <li>Model based on business rules, utilizing engagement data from multiple sources</li>
+                                </ul>
+                            </li>
+                            <li>Record linkage code for creating a standard ID for similar records from multiple sources</li>
+                            <li>Hierarchy creation for businesses based on their headquarters</li>
+                            <li>Market Expansion and Upselling Campaigns:
+                                <ul class="list-disc list-outside ml-5">
+                                    <li>Worked on and owned multiple campaigns for expanding customer base and promoting upselling</li>
+                                    <li>Employed diverse techniques tailored to customer data usage and website visit patterns</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="font-semibold text-red-500">Web Developer</h3>
+                        <p class="text-gray-600">Wipro | June, 2021 - January, 2022</p>
+                        <ul class="list-disc list-outside text-gray-700 mt-2 ml-5">
+                            <li>Worked as a web developer in the airline industry</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="academic-projects" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 text-red-600">ACADEMIC PROJECTS</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="font-semibold text-red-500">X-ray Detection of Pneumonia using Convolutional Neural Networks (CNN) in TensorFlow</h3>
+                        <ul class="list-disc list-outside text-gray-700 mt-2 ml-5">
+                            <li>Developed a CNN-based model to detect pneumonia from X-ray images, aiming to contribute to the early diagnosis and treatment of respiratory diseases.</li>
+                            <li>Leveraged TensorFlow for in-depth analysis of X-ray images, focusing on pneumonia detection.</li>
+                            <li>Implemented CNN architecture achieving an accuracy rate more than 88% in pneumonia detection from X-ray images.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="font-semibold text-red-500">Chatbot with PyTorch</h3>
+                        <ul class="list-disc list-outside text-gray-700 mt-2 ml-5">
+                            <li>Utilized NLTK toolkit for NLP preprocessing, including tokenization, stemming, and creating a Bag of Words model.</li>
+                            <li>Implemented PyTorch to build and train the chatbot.</li>
+                            <li>Achieved a conversational AI system capable of interactive and context-aware responses.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="font-semibold text-red-500">Stock Market Forecasting</h3>
+                        <ul class="list-disc list-outside text-gray-700 mt-2 ml-5">
+                            <li>Successfully applied the Autoregressive Integrated Moving Average (ARIMA) model to forecast stock prices.</li>
+                            <li>Conducted comprehensive time series analysis, including Dickey-Fuller tests and rolling statistics, to identify and isolate trends and seasonality in stock market data.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="font-semibold text-red-500">All-Terrain Vehicle - Baja SAE India (College Project 2018-20)</h3>
+                        <ul class="list-disc list-outside text-gray-700 mt-2 ml-5">
+                            <li>Designed out-board braking circuit, brake rotors and brake pedals for ATV using SolidWorks. Additionally, conducted structural analysis and thermal analysis of the components to ensure the factor of safety of the design.</li>
+                            <li>Participated in M-Baja SAE INDIA and secured all India rank 29th, (2019).</li>
+                            <li>Participated in E-Baja SAE INDIA and secured all India rank 26th in finals and 4th in the first round (2020).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-10 text-gray-600">
+            <p>&copy; 2023 Thaju K Habeeb. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        gsap.from("header", {duration: 1, y: -50, opacity: 0, ease: "power3.out"});
+        gsap.from("section", {duration: 1, opacity: 0, y: 50, stagger: 0.2, ease: "power3.out"});
+
+        // Update this script for the lighter background animation
+        const svg = document.querySelector('.background-animation');
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+        const numNodes = 40; // Increased number of nodes
+        const numLinks = 80; // Increased number of links
+
+        function createScatteredNetwork() {
+            const nodes = [];
+            const links = [];
+
+            for (let i = 0; i < numNodes; i++) {
+                const x = Math.random() * width;
+                const y = Math.random() * height;
+                nodes.push({ x, y });
+
+                const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                circle.setAttribute("cx", x);
+                circle.setAttribute("cy", y);
+                circle.setAttribute("r", Math.random() * 6 + 5); // Increased node size
+                circle.classList.add("node", "pulse");
+                svg.appendChild(circle);
+
+                // Add extra small circle over the node
+                const centerCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                centerCircle.setAttribute("cx", x);
+                centerCircle.setAttribute("cy", y);
+                centerCircle.setAttribute("r", 2);
+                centerCircle.classList.add("node-center");
+                svg.appendChild(centerCircle);
+            }
+
+            for (let i = 0; i < numLinks; i++) {
+                const startNode = nodes[Math.floor(Math.random() * nodes.length)];
+                const endNode = nodes[Math.floor(Math.random() * nodes.length)];
+                const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+                line.setAttribute("x1", startNode.x);
+                line.setAttribute("y1", startNode.y);
+                line.setAttribute("x2", endNode.x);
+                line.setAttribute("y2", endNode.y);
+                line.classList.add("link", "pulse");
+                svg.appendChild(line);
+                links.push(line);
+            }
+
+            return { nodes, links };
+        }
+
+        const network = createScatteredNetwork();
+
+        function addHoverEffect() {
+            const nodes = svg.querySelectorAll('.node');
+            nodes.forEach(node => {
+                node.addEventListener('mouseover', () => {
+                    node.style.fill = '#ff3333';
+                    const cx = parseFloat(node.getAttribute('cx'));
+                    const cy = parseFloat(node.getAttribute('cy'));
+                    const connectedLinks = Array.from(svg.querySelectorAll('.link')).filter(link => 
+                        (link.getAttribute('x1') == cx && link.getAttribute('y1') == cy) ||
+                        (link.getAttribute('x2') == cx && link.getAttribute('y2') == cy)
+                    );
+                    connectedLinks.forEach(link => link.style.stroke = '#ff3333');
+                });
+                node.addEventListener('mouseout', () => {
+                    node.style.fill = '#cc0000';
+                    const connectedLinks = Array.from(svg.querySelectorAll('.link')).filter(link => 
+                        (link.getAttribute('x1') == parseFloat(node.getAttribute('cx')) && link.getAttribute('y1') == parseFloat(node.getAttribute('cy'))) ||
+                        (link.getAttribute('x2') == parseFloat(node.getAttribute('cx')) && link.getAttribute('y2') == parseFloat(node.getAttribute('cy')))
+                    );
+                    connectedLinks.forEach(link => link.style.stroke = '#ffcccc');
+                });
+            });
+        }
+
+        addHoverEffect();
+
+        // Resize the SVG when the window is resized
+        window.addEventListener('resize', () => {
+            const newWidth = window.innerWidth;
+            const newHeight = window.innerHeight;
+            svg.setAttribute('viewBox', `0 0 ${newWidth} ${newHeight}`);
+        });
+    </script>
+</body>
+</html>
